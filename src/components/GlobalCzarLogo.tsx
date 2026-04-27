@@ -18,24 +18,25 @@ export default function GlobalCzarLogo({
         aria-label="GLOBAL CZAR logo"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <circle cx="32" cy="32" r="29" fill="currentColor" opacity="0.08" />
-        <circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" strokeWidth="3" />
+        <rect x="8" y="8" width="48" height="48" rx="11" fill="currentColor" opacity="0.08" />
+        <rect x="8" y="8" width="48" height="48" rx="11" fill="none" stroke="currentColor" strokeWidth="3" />
         <path
-          d="M17 34.5h21.5c4.4 0 8-3.6 8-8S42.9 18.5 38.5 18.5H28.2"
+          d="M39.5 23.5H29c-6 0-10.5 3.6-10.5 8.5S23 40.5 29 40.5h7.8v-7h-7"
           fill="none"
           stroke="currentColor"
           strokeLinecap="round"
-          strokeWidth="5"
+          strokeLinejoin="round"
+          strokeWidth="4.5"
         />
         <path
-          d="M47 29.5H25.5c-4.4 0-8 3.6-8 8s3.6 8 8 8h10.3"
+          d="M45.5 23.5H36c-4.8 0-8 3.3-8 8.5s3.2 8.5 8 8.5h9.5"
           fill="none"
           stroke="currentColor"
           strokeLinecap="round"
-          strokeWidth="5"
+          strokeLinejoin="round"
+          strokeWidth="4.5"
+          opacity="0.72"
         />
-        <path d="M25 25h13l-6.8 14H44" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" />
-        <circle cx="48" cy="18" r="4" fill="currentColor" />
       </svg>
       <span className={`min-w-0 ${textClassName}`}>
         <span className="block truncate text-base font-black uppercase leading-none">GLOBAL CZAR</span>
