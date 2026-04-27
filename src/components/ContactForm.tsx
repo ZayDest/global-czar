@@ -55,8 +55,8 @@ export default function ContactForm() {
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
           <CheckCircle size={32} className="text-green-600" />
         </div>
-        <h3 className="text-xl font-black text-[#0a1628] mb-2">Message Sent!</h3>
-        <p className="text-slate-500 text-sm max-w-xs mx-auto">
+        <h3 className="text-xl font-black text-[#0a1628] dark:text-white mb-2">Message Sent!</h3>
+        <p className="text-slate-500 dark:text-slate-400 text-sm max-w-xs mx-auto">
           Thank you for reaching out. Our team will contact you within 24 business hours.
         </p>
         <button
@@ -73,7 +73,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-bold text-[#0a1628] uppercase tracking-wider mb-1.5">
+          <label className="block text-xs font-bold text-[#0a1628] dark:text-white uppercase tracking-wider mb-1.5">
             Full Name <span className="text-red-500">*</span>
           </label>
           <input
@@ -83,11 +83,11 @@ export default function ContactForm() {
             value={form.name}
             onChange={handleChange}
             placeholder="John Smith"
-            className="w-full px-4 py-3 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-[#c8960c] focus:ring-1 focus:ring-[#c8960c] transition-colors"
+            className="w-full px-4 py-3 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-600 text-sm focus:outline-none focus:border-[#c8960c] focus:ring-1 focus:ring-[#c8960c] transition-colors"
           />
         </div>
         <div>
-          <label className="block text-xs font-bold text-[#0a1628] uppercase tracking-wider mb-1.5">
+          <label className="block text-xs font-bold text-[#0a1628] dark:text-white uppercase tracking-wider mb-1.5">
             Company Name <span className="text-red-500">*</span>
           </label>
           <input
@@ -97,14 +97,14 @@ export default function ContactForm() {
             value={form.company}
             onChange={handleChange}
             placeholder="Your Company Ltd."
-            className="w-full px-4 py-3 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-[#c8960c] focus:ring-1 focus:ring-[#c8960c] transition-colors"
+            className="w-full px-4 py-3 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-600 text-sm focus:outline-none focus:border-[#c8960c] focus:ring-1 focus:ring-[#c8960c] transition-colors"
           />
         </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-bold text-[#0a1628] uppercase tracking-wider mb-1.5">
+          <label className="block text-xs font-bold text-[#0a1628] dark:text-white uppercase tracking-wider mb-1.5">
             Business Email <span className="text-red-500">*</span>
           </label>
           <input
@@ -114,11 +114,11 @@ export default function ContactForm() {
             value={form.email}
             onChange={handleChange}
             placeholder="john@company.com"
-            className="w-full px-4 py-3 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-[#c8960c] focus:ring-1 focus:ring-[#c8960c] transition-colors"
+            className="w-full px-4 py-3 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-600 text-sm focus:outline-none focus:border-[#c8960c] focus:ring-1 focus:ring-[#c8960c] transition-colors"
           />
         </div>
         <div>
-          <label className="block text-xs font-bold text-[#0a1628] uppercase tracking-wider mb-1.5">
+          <label className="block text-xs font-bold text-[#0a1628] dark:text-white uppercase tracking-wider mb-1.5">
             Phone / WhatsApp
           </label>
           <input
@@ -127,21 +127,21 @@ export default function ContactForm() {
             value={form.phone}
             onChange={handleChange}
             placeholder="+91 99972 74666"
-            className="w-full px-4 py-3 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-[#c8960c] focus:ring-1 focus:ring-[#c8960c] transition-colors"
+            className="w-full px-4 py-3 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-600 text-sm focus:outline-none focus:border-[#c8960c] focus:ring-1 focus:ring-[#c8960c] transition-colors"
           />
         </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-bold text-[#0a1628] uppercase tracking-wider mb-1.5">
+          <label className="block text-xs font-bold text-[#0a1628] dark:text-white uppercase tracking-wider mb-1.5">
             Product of Interest
           </label>
           <select
             name="product"
             value={form.product}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-[#c8960c] focus:ring-1 focus:ring-[#c8960c] transition-colors bg-white text-slate-700"
+            className="w-full px-4 py-3 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-600 text-sm focus:outline-none focus:border-[#c8960c] focus:ring-1 focus:ring-[#c8960c] transition-colors"
           >
             <option value="">Select a product...</option>
             {productOptions.map((opt) => (
@@ -152,7 +152,7 @@ export default function ContactForm() {
           </select>
         </div>
         <div>
-          <label className="block text-xs font-bold text-[#0a1628] uppercase tracking-wider mb-1.5">
+          <label className="block text-xs font-bold text-[#0a1628] dark:text-white uppercase tracking-wider mb-1.5">
             Estimated Quantity (MT/month)
           </label>
           <input
@@ -161,13 +161,13 @@ export default function ContactForm() {
             value={form.quantity}
             onChange={handleChange}
             placeholder="e.g. 50 MT/month"
-            className="w-full px-4 py-3 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-[#c8960c] focus:ring-1 focus:ring-[#c8960c] transition-colors"
+            className="w-full px-4 py-3 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-600 text-sm focus:outline-none focus:border-[#c8960c] focus:ring-1 focus:ring-[#c8960c] transition-colors"
           />
         </div>
       </div>
 
       <div>
-        <label className="block text-xs font-bold text-[#0a1628] uppercase tracking-wider mb-1.5">
+        <label className="block text-xs font-bold text-[#0a1628] dark:text-white uppercase tracking-wider mb-1.5">
           Message / Specifications <span className="text-red-500">*</span>
         </label>
         <textarea
@@ -177,7 +177,7 @@ export default function ContactForm() {
           value={form.message}
           onChange={handleChange}
           placeholder="Please describe your requirements, specifications, delivery destination, and any other relevant details..."
-          className="w-full px-4 py-3 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-[#c8960c] focus:ring-1 focus:ring-[#c8960c] transition-colors resize-none"
+          className="w-full px-4 py-3 border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-600 text-sm focus:outline-none focus:border-[#c8960c] focus:ring-1 focus:ring-[#c8960c] transition-colors resize-none"
         />
       </div>
 
@@ -190,7 +190,7 @@ export default function ContactForm() {
           onChange={handleChange}
           className="mt-0.5 w-4 h-4 accent-[#c8960c] flex-shrink-0"
         />
-        <label htmlFor="subscribe" className="text-xs text-slate-500 cursor-pointer">
+        <label htmlFor="subscribe" className="text-xs text-slate-500 dark:text-slate-400 cursor-pointer">
           Subscribe to receive market price updates, product availability, and industry insights from GLOBAL CZAR.
         </label>
       </div>
@@ -212,7 +212,7 @@ export default function ContactForm() {
         )}
       </button>
 
-      <p className="text-xs text-slate-400 text-center">
+      <p className="text-xs text-slate-400 dark:text-slate-500 text-center">
         By submitting, you agree to our privacy policy. We never share your information with third parties.
       </p>
     </form>

@@ -52,14 +52,14 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Reasons */}
-      <section className="py-12 bg-white border-b border-slate-100">
+      <section className="py-12 bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-slate-500 text-sm mb-6">How can we help you?</p>
+          <p className="text-center text-slate-500 dark:text-slate-400 text-sm mb-6">How can we help you?</p>
           <div className="flex flex-wrap justify-center gap-3">
             {contactReasons.map((r) => (
               <div
                 key={r.label}
-                className="flex items-center gap-2 bg-slate-50 border border-slate-100 hover:border-[#c8960c]/40 hover:bg-[#c8960c]/5 px-4 py-2.5 rounded-full text-sm text-slate-600 font-medium cursor-pointer transition-all"
+                className="flex items-center gap-2 bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800 hover:border-[#c8960c]/40 hover:bg-[#c8960c]/5 px-4 py-2.5 rounded-full text-sm text-slate-600 dark:text-slate-300 font-medium cursor-pointer transition-all"
               >
                 <span>{r.icon}</span>
                 {r.label}
@@ -70,17 +70,17 @@ export default function ContactPage() {
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-24 bg-slate-50" id="rfq">
+      <section className="py-24 bg-slate-50 dark:bg-slate-900/60" id="rfq">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             {/* Form - takes 3 cols */}
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8">
+              <div className="bg-white dark:bg-slate-950 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 p-8">
                 <div className="mb-6">
-                  <h2 className="text-2xl font-black text-[#0a1628] mb-2">
+                  <h2 className="text-2xl font-black text-[#0a1628] dark:text-white mb-2">
                     Send Us a Message
                   </h2>
-                  <p className="text-slate-500 text-sm">
+                  <p className="text-slate-500 dark:text-slate-400 text-sm">
                     Complete the form below and we&apos;ll get back to you within 24 business hours.
                   </p>
                 </div>
@@ -102,7 +102,7 @@ export default function ContactPage() {
                       <Mail size={16} className="text-[#c8960c]" />
                     </div>
                     <div>
-                      <div className="text-slate-400 text-xs">Owner</div>
+                      <div className="text-slate-400 dark:text-slate-500 text-xs">Owner</div>
                       <div className="text-white text-sm font-medium group-hover:text-[#c8960c] transition-colors">
                         Mohammad Rizwan Siddiqui
                       </div>
@@ -116,7 +116,7 @@ export default function ContactPage() {
                       <Phone size={16} className="text-[#c8960c]" />
                     </div>
                     <div>
-                      <div className="text-slate-400 text-xs">Phone / WhatsApp</div>
+                      <div className="text-slate-400 dark:text-slate-500 text-xs">Phone / WhatsApp</div>
                       <div className="text-white text-sm font-medium group-hover:text-[#c8960c] transition-colors">
                         +91 99972 74666
                       </div>
@@ -132,7 +132,7 @@ export default function ContactPage() {
                       <ExternalLink size={16} className="text-[#c8960c]" />
                     </div>
                     <div>
-                      <div className="text-slate-400 text-xs">LinkedIn</div>
+                      <div className="text-slate-400 dark:text-slate-500 text-xs">LinkedIn</div>
                       <div className="text-white text-sm font-medium group-hover:text-[#c8960c] transition-colors">
                         GLOBAL CZAR
                       </div>
@@ -143,7 +143,7 @@ export default function ContactPage() {
                       <Clock size={16} className="text-[#c8960c]" />
                     </div>
                     <div>
-                      <div className="text-slate-400 text-xs">Response Time</div>
+                      <div className="text-slate-400 dark:text-slate-500 text-xs">Response Time</div>
                       <div className="text-white text-sm font-medium">Within 24 hours</div>
                     </div>
                   </div>
@@ -154,32 +154,32 @@ export default function ContactPage() {
               {offices.map((office) => (
                 <div
                   key={office.city}
-                  className="bg-white rounded-2xl border border-slate-100 p-5"
+                  className="bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-800 p-5"
                 >
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-2xl">{office.flag}</span>
                     <div>
-                      <div className="font-black text-[#0a1628] text-sm">{office.city}</div>
+                      <div className="font-black text-[#0a1628] dark:text-white text-sm">{office.city}</div>
                       <div className="text-[#c8960c] text-xs font-bold uppercase tracking-wider">
                         {office.type}
                       </div>
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <div className="flex gap-2 items-start text-xs text-slate-500">
-                      <MapPin size={12} className="text-slate-400 mt-0.5 flex-shrink-0" />
+                    <div className="flex gap-2 items-start text-xs text-slate-500 dark:text-slate-400">
+                      <MapPin size={12} className="text-slate-400 dark:text-slate-500 mt-0.5 flex-shrink-0" />
                       {office.address}
                     </div>
-                    <div className="flex gap-2 items-center text-xs text-slate-500">
-                      <Phone size={12} className="text-slate-400 flex-shrink-0" />
+                    <div className="flex gap-2 items-center text-xs text-slate-500 dark:text-slate-400">
+                      <Phone size={12} className="text-slate-400 dark:text-slate-500 flex-shrink-0" />
                       {office.phone}
                     </div>
-                    <div className="flex gap-2 items-center text-xs text-slate-500">
-                      <Mail size={12} className="text-slate-400 flex-shrink-0" />
+                    <div className="flex gap-2 items-center text-xs text-slate-500 dark:text-slate-400">
+                      <Mail size={12} className="text-slate-400 dark:text-slate-500 flex-shrink-0" />
                       {office.email}
                     </div>
-                    <div className="flex gap-2 items-center text-xs text-slate-500">
-                      <Clock size={12} className="text-slate-400 flex-shrink-0" />
+                    <div className="flex gap-2 items-center text-xs text-slate-500 dark:text-slate-400">
+                      <Clock size={12} className="text-slate-400 dark:text-slate-500 flex-shrink-0" />
                       {office.hours}
                     </div>
                   </div>
@@ -207,9 +207,9 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Strip */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-slate-950">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-2xl font-black text-[#0a1628] text-center mb-8">
+          <h2 className="text-2xl font-black text-[#0a1628] dark:text-white text-center mb-8">
             Common Questions
           </h2>
           <div className="space-y-4">
@@ -231,14 +231,14 @@ export default function ContactPage() {
                 a: "We offer T/T (bank transfer), LC at sight, and for established customers, deferred payment options. Terms are discussed during onboarding.",
               },
             ].map((faq) => (
-              <details key={faq.q} className="group border border-slate-100 rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-[#0a1628] text-sm hover:bg-slate-50 transition-colors">
+              <details key={faq.q} className="group border border-slate-100 dark:border-slate-800 rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-[#0a1628] dark:text-white text-sm hover:bg-slate-50 dark:hover:bg-slate-800 dark:bg-slate-900/60 transition-colors">
                   {faq.q}
                   <span className="text-[#c8960c] text-xl font-light transition-transform group-open:rotate-45">
                     +
                   </span>
                 </summary>
-                <div className="px-5 pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                <div className="px-5 pb-5 text-slate-500 dark:text-slate-400 text-sm leading-relaxed border-t border-slate-100 dark:border-slate-800 pt-4">
                   {faq.a}
                 </div>
               </details>

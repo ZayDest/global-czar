@@ -276,7 +276,7 @@ export default function Home() {
                   <span className="flex items-center gap-2">
                     <BadgeCheck size={17} className="text-[#062b5f] dark:text-sky-300" /> {service}
                   </span>
-                  <ChevronRight size={15} className="text-slate-400" />
+                  <ChevronRight size={15} className="text-slate-400 dark:text-slate-500" />
                 </li>
               ))}
             </ul>
@@ -344,7 +344,7 @@ export default function Home() {
         </p>
         <Link
           href="/contact#rfq"
-          className="mt-5 inline-flex bg-white px-6 py-3 text-xs font-black uppercase text-[#062b5f] transition-colors hover:bg-slate-100"
+          className="mt-5 inline-flex bg-white px-6 py-3 text-xs font-black uppercase text-[#062b5f] transition-colors hover:bg-slate-100 dark:bg-slate-900 dark:text-sky-200 dark:hover:bg-slate-800"
         >
           Request Quote Today
         </Link>

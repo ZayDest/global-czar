@@ -213,7 +213,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Alloys */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -224,7 +224,7 @@ export default function ProductsPage() {
             <h2 className="text-3xl sm:text-4xl font-black text-[#0a1628] mb-4">
               Aluminum Alloy Grades
             </h2>
-            <p className="text-slate-500 max-w-xl mx-auto">
+            <p className="text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
               All alloys sourced from certified smelters with full Mill Test Certificates.
               Custom specifications available on request.
             </p>
@@ -235,7 +235,7 @@ export default function ProductsPage() {
               <div
                 key={alloy.id}
                 id={alloy.id}
-                className="rounded-2xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                className="rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-5">
                   {/* Left accent */}
@@ -258,16 +258,16 @@ export default function ProductsPage() {
                   <div className="lg:col-span-4 p-8">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div className="md:col-span-2">
-                        <h3 className="font-black text-[#0a1628] text-xl mb-2">{alloy.fullName}</h3>
-                        <p className="text-slate-500 text-xs mb-2 font-mono bg-slate-50 inline-block px-2 py-1 rounded">
+                        <h3 className="font-black text-[#0a1628] dark:text-white text-xl mb-2">{alloy.fullName}</h3>
+                        <p className="text-slate-500 dark:text-slate-400 text-xs mb-2 font-mono bg-slate-50 dark:bg-slate-900/60 inline-block px-2 py-1 rounded">
                           {alloy.composition}
                         </p>
-                        <p className="text-slate-600 text-sm leading-relaxed mt-3 mb-4">{alloy.desc}</p>
+                        <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mt-3 mb-4">{alloy.desc}</p>
                         <div>
-                          <div className="text-xs font-bold text-[#0a1628] uppercase tracking-wider mb-2">Applications</div>
+                          <div className="text-xs font-bold text-[#0a1628] dark:text-white uppercase tracking-wider mb-2">Applications</div>
                           <div className="flex flex-wrap gap-2">
                             {alloy.applications.map((app) => (
-                              <span key={app} className="text-xs bg-[#0a1628]/5 text-[#0a1628] px-3 py-1 rounded-full">
+                              <span key={app} className="text-xs bg-[#0a1628]/5 text-[#0a1628] dark:text-white px-3 py-1 rounded-full">
                                 {app}
                               </span>
                             ))}
@@ -276,14 +276,14 @@ export default function ProductsPage() {
                       </div>
 
                       <div>
-                        <div className="text-xs font-bold text-[#0a1628] uppercase tracking-wider mb-3">
+                        <div className="text-xs font-bold text-[#0a1628] dark:text-white uppercase tracking-wider mb-3">
                           Typical Properties
                         </div>
                         <div className="space-y-2">
                           {alloy.properties.map((p) => (
-                            <div key={p.prop} className="flex justify-between text-sm border-b border-slate-100 pb-2">
-                              <span className="text-slate-500">{p.prop}</span>
-                              <span className="font-semibold text-[#0a1628]">{p.val}</span>
+                            <div key={p.prop} className="flex justify-between text-sm border-b border-slate-100 dark:border-slate-800 pb-2">
+                              <span className="text-slate-500 dark:text-slate-400">{p.prop}</span>
+                              <span className="font-semibold text-[#0a1628] dark:text-white">{p.val}</span>
                             </div>
                           ))}
                         </div>
@@ -304,7 +304,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Other Metals */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-slate-50 dark:bg-slate-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -322,18 +322,18 @@ export default function ProductsPage() {
               <div
                 key={m.id}
                 id={m.id}
-                className="bg-white rounded-2xl border border-slate-100 p-6 hover:border-[#0a1628]/20 hover:shadow-lg transition-all card-hover"
+                className="bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-800 p-6 hover:border-[#0a1628]/20 hover:shadow-lg transition-all card-hover"
               >
                 <div className="flex gap-4 items-start mb-4">
                   <div className="text-4xl">{m.icon}</div>
                   <div>
-                    <h3 className="font-black text-[#0a1628] text-lg">{m.name}</h3>
-                    <p className="text-slate-500 text-sm leading-relaxed mt-1">{m.desc}</p>
+                    <h3 className="font-black text-[#0a1628] dark:text-white text-lg">{m.name}</h3>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mt-1">{m.desc}</p>
                   </div>
                 </div>
                 <div className="space-y-2 mb-5">
                   {m.specs.map((spec) => (
-                    <div key={spec} className="flex gap-2 items-center text-sm text-slate-600">
+                    <div key={spec} className="flex gap-2 items-center text-sm text-slate-600 dark:text-slate-300">
                       <CheckCircle size={14} className="text-[#c8960c] flex-shrink-0" />
                       {spec}
                     </div>
@@ -341,7 +341,7 @@ export default function ProductsPage() {
                 </div>
                 <Link
                   href="/contact#rfq"
-                  className="inline-flex items-center gap-2 text-[#0a1628] font-semibold text-sm border-b border-[#c8960c] hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-[#0a1628] dark:text-white font-semibold text-sm border-b border-[#c8960c] hover:gap-3 transition-all"
                 >
                   Request Quote <ArrowRight size={14} />
                 </Link>
@@ -380,10 +380,10 @@ export default function ProductsPage() {
                     <Icon size={22} className="text-[#c8960c]" />
                   </div>
                   <h3 className="text-white font-bold text-base mb-2">{s.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed mb-4">{s.desc}</p>
+                  <p className="text-slate-400 dark:text-slate-500 text-sm leading-relaxed mb-4">{s.desc}</p>
                   <div className="space-y-2">
                     {s.features.map((f) => (
-                      <div key={f} className="flex gap-2 items-center text-xs text-slate-400">
+                      <div key={f} className="flex gap-2 items-center text-xs text-slate-400 dark:text-slate-500">
                         <div className="w-1 h-1 bg-[#c8960c] rounded-full flex-shrink-0" />
                         {f}
                       </div>

@@ -95,7 +95,7 @@ export default function AboutPage() {
       </section>
 
       {/* Company Overview */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -103,24 +103,24 @@ export default function AboutPage() {
                 <div className="w-12 h-1 bg-[#c8960c] rounded" />
                 <span className="text-[#c8960c] text-xs font-bold uppercase tracking-widest">Our Journey</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-black text-[#0a1628] mb-6">
+              <h2 className="text-3xl sm:text-4xl font-black text-[#0a1628] dark:text-white mb-6">
                 Connecting Global Smelters with Industry Leaders
               </h2>
-              <p className="text-slate-600 leading-relaxed mb-5">
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-5">
                 GLOBAL CZAR was founded in 2010 with a singular vision: to
                 become the most trusted bridge between premium metals producers
                 and world-class manufacturers. Starting with aluminum alloys for
                 the Japanese automotive sector, we quickly expanded our portfolio
                 and geographic reach.
               </p>
-              <p className="text-slate-600 leading-relaxed mb-5">
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-5">
                 Today, we source from certified smelters across the UAE, Nigeria,
                 Oman, Qatar, and India — bringing consistent quality and
                 competitive pricing to clients across Japan, Europe, and the
                 Middle East. Our dual logistics hubs in UAE and Singapore ensure
                 fast, reliable delivery anywhere in the world.
               </p>
-              <p className="text-slate-600 leading-relaxed mb-8">
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
                 Our team of experienced metals professionals manages every
                 aspect of the supply chain — from quality inspection and export
                 documentation to market advisory and after-sales support.
@@ -132,9 +132,9 @@ export default function AboutPage() {
                   { n: "500+", l: "Partner Companies" },
                   { n: "6+", l: "Alloy Grades" },
                 ].map((s) => (
-                  <div key={s.l} className="bg-slate-50 rounded-xl p-4 text-center border border-slate-100">
+                  <div key={s.l} className="bg-slate-50 dark:bg-slate-900/60 rounded-xl p-4 text-center border border-slate-100 dark:border-slate-800">
                     <div className="text-2xl font-black text-[#c8960c]">{s.n}</div>
-                    <div className="text-slate-600 text-sm mt-1">{s.l}</div>
+                    <div className="text-slate-600 dark:text-slate-300 text-sm mt-1">{s.l}</div>
                   </div>
                 ))}
               </div>
@@ -142,7 +142,7 @@ export default function AboutPage() {
 
             {/* Timeline */}
             <div>
-              <h3 className="text-xl font-black text-[#0a1628] mb-6">
+              <h3 className="text-xl font-black text-[#0a1628] dark:text-white mb-6">
                 Our Milestones
               </h3>
               <div className="space-y-4">
@@ -158,7 +158,7 @@ export default function AboutPage() {
                     </div>
                     <div className="pt-2">
                       <span className="text-[#c8960c] font-bold text-sm">{m.year}</span>
-                      <p className="text-slate-600 text-sm leading-relaxed">{m.event}</p>
+                      <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">{m.event}</p>
                     </div>
                   </div>
                 ))}
@@ -192,7 +192,7 @@ export default function AboutPage() {
               <div key={item.title} className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all">
                 <div className="text-5xl mb-5">{item.icon}</div>
                 <h3 className="text-xl font-black text-white mb-4">{item.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{item.text}</p>
+                <p className="text-slate-400 dark:text-slate-500 text-sm leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>
@@ -200,7 +200,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-slate-50 dark:bg-slate-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -217,12 +217,12 @@ export default function AboutPage() {
             {values.map((v) => {
               const Icon = v.icon;
               return (
-                <div key={v.title} className="bg-white rounded-xl p-6 border border-slate-100 hover:border-[#c8960c]/30 hover:shadow-lg transition-all card-hover">
+                <div key={v.title} className="bg-white dark:bg-slate-950 rounded-xl p-6 border border-slate-100 dark:border-slate-800 hover:border-[#c8960c]/30 hover:shadow-lg transition-all card-hover">
                   <div className="w-12 h-12 bg-[#c8960c]/10 rounded-xl flex items-center justify-center mb-4">
                     <Icon size={22} className="text-[#c8960c]" />
                   </div>
-                  <h3 className="font-black text-[#0a1628] text-base mb-2">{v.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed">{v.desc}</p>
+                  <h3 className="font-black text-[#0a1628] dark:text-white text-base mb-2">{v.title}</h3>
+                  <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{v.desc}</p>
                 </div>
               );
             })}
@@ -231,11 +231,11 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl font-black text-[#0a1628] mb-4">Our Leadership Team</h2>
-            <p className="text-slate-500 max-w-xl mx-auto">
+            <p className="text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
               Experienced professionals with deep expertise in metals trading, logistics, and global supply chain management.
             </p>
           </div>
@@ -245,8 +245,8 @@ export default function AboutPage() {
                 <div className="w-24 h-24 bg-gradient-to-br from-[#0a1628] to-[#1a3a5c] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform shadow-lg">
                   <span className="text-[#c8960c] font-black text-xl">{member.initial}</span>
                 </div>
-                <div className="font-bold text-[#0a1628] text-sm">{member.name}</div>
-                <div className="text-slate-500 text-xs mt-1">{member.role}</div>
+                <div className="font-bold text-[#0a1628] dark:text-white text-sm">{member.name}</div>
+                <div className="text-slate-500 dark:text-slate-400 text-xs mt-1">{member.role}</div>
               </div>
             ))}
           </div>

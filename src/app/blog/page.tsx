@@ -127,7 +127,7 @@ export default function BlogPage() {
       </section>
 
       {/* Categories */}
-      <section className="py-8 bg-white border-b border-slate-100">
+      <section className="py-8 bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2 justify-center">
             {categories.map((cat) => (
@@ -136,7 +136,7 @@ export default function BlogPage() {
                 className={`text-xs font-semibold px-4 py-2 rounded-full border transition-all ${
                   cat === "All"
                     ? "bg-[#0a1628] border-[#0a1628] text-white"
-                    : "border-slate-200 text-slate-600 hover:border-[#c8960c] hover:text-[#c8960c]"
+                    : "border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:border-[#c8960c] hover:text-[#c8960c]"
                 }`}
               >
                 {cat}
@@ -147,14 +147,14 @@ export default function BlogPage() {
       </section>
 
       {/* Featured Posts */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-black text-[#0a1628] mb-6">Featured Articles</h2>
+          <h2 className="text-xl font-black text-[#0a1628] dark:text-white mb-6">Featured Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
             {featured.map((post) => (
               <div
                 key={post.slug}
-                className="group rounded-2xl border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow card-hover"
+                className="group rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden hover:shadow-xl transition-shadow card-hover"
               >
                 <div className="h-32 bg-gradient-to-br from-[#0a1628] to-[#1a3a5c] p-6 flex items-end">
                   <div className="flex gap-2">
@@ -167,14 +167,14 @@ export default function BlogPage() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-black text-[#0a1628] text-lg leading-tight mb-3 group-hover:text-[#4a6fa5] transition-colors">
+                  <h3 className="font-black text-[#0a1628] dark:text-white text-lg leading-tight mb-3 group-hover:text-[#4a6fa5] transition-colors">
                     {post.title}
                   </h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-4 line-clamp-3">
+                  <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3 text-xs text-slate-400">
+                    <div className="flex items-center gap-3 text-xs text-slate-400 dark:text-slate-500">
                       <span>{post.date}</span>
                       <span className="w-1 h-1 bg-slate-300 rounded-full" />
                       <span className="flex items-center gap-1">
@@ -194,12 +194,12 @@ export default function BlogPage() {
           </div>
 
           {/* All Posts */}
-          <h2 className="text-xl font-black text-[#0a1628] mb-6">All Articles</h2>
+          <h2 className="text-xl font-black text-[#0a1628] dark:text-white mb-6">All Articles</h2>
           <div className="space-y-4">
             {regular.map((post) => (
               <div
                 key={post.slug}
-                className="group flex gap-4 items-start p-5 rounded-xl border border-slate-100 hover:border-[#0a1628]/20 hover:shadow-md transition-all"
+                className="group flex gap-4 items-start p-5 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-[#0a1628]/20 hover:shadow-md transition-all"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-[#0a1628] to-[#1a3a5c] rounded-lg flex items-center justify-center flex-shrink-0">
                   <Tag size={22} className="text-[#c8960c]" />
@@ -210,16 +210,16 @@ export default function BlogPage() {
                       {post.category}
                     </span>
                     <span className="text-slate-300 text-xs">·</span>
-                    <span className="text-slate-400 text-xs">{post.date}</span>
+                    <span className="text-slate-400 dark:text-slate-500 text-xs">{post.date}</span>
                     <span className="text-slate-300 text-xs">·</span>
-                    <span className="text-slate-400 text-xs flex items-center gap-0.5">
+                    <span className="text-slate-400 dark:text-slate-500 text-xs flex items-center gap-0.5">
                       <Clock size={10} /> {post.readTime}
                     </span>
                   </div>
-                  <h3 className="font-bold text-[#0a1628] text-sm sm:text-base leading-tight group-hover:text-[#4a6fa5] transition-colors mb-1">
+                  <h3 className="font-bold text-[#0a1628] dark:text-white text-sm sm:text-base leading-tight group-hover:text-[#4a6fa5] transition-colors mb-1">
                     {post.title}
                   </h3>
-                  <p className="text-slate-500 text-xs leading-relaxed line-clamp-2 hidden sm:block">
+                  <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed line-clamp-2 hidden sm:block">
                     {post.excerpt}
                   </p>
                 </div>
@@ -236,19 +236,19 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-16 bg-slate-50 border-t border-slate-100">
+      <section className="py-16 bg-slate-50 dark:bg-slate-900/60 border-t border-slate-100 dark:border-slate-800">
         <div className="max-w-2xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-black text-[#0a1628] mb-3">
+          <h2 className="text-2xl font-black text-[#0a1628] dark:text-white mb-3">
             Stay Informed on Metals Markets
           </h2>
-          <p className="text-slate-500 mb-6 text-sm">
+          <p className="text-slate-500 dark:text-slate-400 mb-6 text-sm">
             Get weekly price updates, market analysis, and trade insights delivered to your inbox.
           </p>
           <div className="flex gap-3 max-w-md mx-auto">
             <input
               type="email"
               placeholder="Your business email"
-              className="flex-1 px-4 py-3 border border-slate-200 rounded text-sm focus:outline-none focus:border-[#c8960c] transition-colors"
+              className="flex-1 px-4 py-3 border border-slate-200 rounded bg-white text-slate-900 placeholder:text-slate-400 text-sm focus:outline-none focus:border-[#c8960c] transition-colors dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-600"
             />
             <button className="bg-[#c8960c] hover:bg-[#f0b429] text-[#0a1628] font-bold px-5 py-3 rounded text-sm transition-colors whitespace-nowrap">
               Subscribe

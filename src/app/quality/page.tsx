@@ -124,7 +124,7 @@ export default function QualityPage() {
       </section>
 
       {/* Quality Promise */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
@@ -133,10 +133,10 @@ export default function QualityPage() {
               { icon: "🔍", title: "3rd Party Inspection", desc: "SGS / BV / Intertek" },
               { icon: "📄", title: "Full Documentation", desc: "MTC, CO, BOL, and more" },
             ].map((item) => (
-              <div key={item.title} className="text-center p-5 rounded-xl bg-slate-50 border border-slate-100">
+              <div key={item.title} className="text-center p-5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800">
                 <div className="text-3xl mb-3">{item.icon}</div>
-                <div className="font-bold text-[#0a1628] text-sm">{item.title}</div>
-                <div className="text-slate-500 text-xs mt-1">{item.desc}</div>
+                <div className="font-bold text-[#0a1628] dark:text-white text-sm">{item.title}</div>
+                <div className="text-slate-500 dark:text-slate-400 text-xs mt-1">{item.desc}</div>
               </div>
             ))}
           </div>
@@ -144,7 +144,7 @@ export default function QualityPage() {
       </section>
 
       {/* Standards & Certifications */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-slate-50 dark:bg-slate-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -155,7 +155,7 @@ export default function QualityPage() {
             <h2 className="text-3xl sm:text-4xl font-black text-[#0a1628] mb-4">
               Certifications & Compliance Standards
             </h2>
-            <p className="text-slate-500 max-w-xl mx-auto">
+            <p className="text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
               We source and supply in compliance with leading international quality and safety standards.
             </p>
           </div>
@@ -164,16 +164,16 @@ export default function QualityPage() {
             {standards.map((s) => (
               <div
                 key={s.code}
-                className="bg-white rounded-2xl p-6 border border-slate-100 hover:border-[#c8960c]/30 hover:shadow-lg transition-all card-hover"
+                className="bg-white dark:bg-slate-950 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 hover:border-[#c8960c]/30 hover:shadow-lg transition-all card-hover"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="text-3xl">{s.icon}</div>
                   <div>
                     <div className="font-black text-[#c8960c] text-base">{s.code}</div>
-                    <div className="text-[#0a1628] font-semibold text-sm">{s.title}</div>
+                    <div className="text-[#0a1628] dark:text-white font-semibold text-sm">{s.title}</div>
                   </div>
                 </div>
-                <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
+                <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -211,7 +211,7 @@ export default function QualityPage() {
                     </div>
                   </div>
                   <h3 className="text-white font-bold text-base mb-2">{step.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                  <p className="text-slate-400 dark:text-slate-500 text-sm leading-relaxed">{step.desc}</p>
                 </div>
               );
             })}
@@ -220,7 +220,7 @@ export default function QualityPage() {
       </section>
 
       {/* Documentation */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -231,7 +231,7 @@ export default function QualityPage() {
             <h2 className="text-3xl font-black text-[#0a1628] mb-4">
               Complete Shipment Documentation
             </h2>
-            <p className="text-slate-500 max-w-xl mx-auto">
+            <p className="text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
               We provide all documents required for smooth import clearance and internal quality records.
             </p>
           </div>
@@ -240,13 +240,13 @@ export default function QualityPage() {
             {docs.map((doc) => (
               <div
                 key={doc.name}
-                className="bg-slate-50 border border-slate-100 rounded-xl p-4 hover:border-[#c8960c]/30 hover:bg-[#c8960c]/5 transition-all"
+                className="bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800 rounded-xl p-4 hover:border-[#c8960c]/30 hover:bg-[#c8960c]/5 transition-all"
               >
                 <div className="flex gap-2 items-start mb-2">
                   <FileCheck size={16} className="text-[#c8960c] flex-shrink-0 mt-0.5" />
-                  <span className="font-bold text-[#0a1628] text-sm">{doc.name}</span>
+                  <span className="font-bold text-[#0a1628] dark:text-white text-sm">{doc.name}</span>
                 </div>
-                <p className="text-slate-500 text-xs leading-relaxed pl-6">{doc.desc}</p>
+                <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed pl-6">{doc.desc}</p>
               </div>
             ))}
           </div>

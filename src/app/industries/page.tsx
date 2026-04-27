@@ -90,17 +90,17 @@ export default function IndustriesPage() {
       </section>
 
       {/* Overview Cards */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {industries.map((ind) => (
               <a
                 key={ind.id}
                 href={`#${ind.id}`}
-                className="group block text-center p-6 rounded-xl bg-slate-50 border border-slate-100 hover:bg-[#0a1628] hover:border-[#0a1628] transition-all duration-300 card-hover"
+                className="group block text-center p-6 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800 hover:bg-[#0a1628] hover:border-[#0a1628] transition-all duration-300 card-hover"
               >
                 <div className="text-4xl mb-3">{ind.icon}</div>
-                <div className="font-bold text-[#0a1628] group-hover:text-white text-sm transition-colors">
+                <div className="font-bold text-[#0a1628] dark:text-white group-hover:text-white text-sm transition-colors">
                   {ind.title}
                 </div>
               </a>
@@ -114,7 +114,7 @@ export default function IndustriesPage() {
         <section
           key={ind.id}
           id={ind.id}
-          className={`py-24 ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}
+          className={`py-24 ${i % 2 === 0 ? "bg-white dark:bg-slate-950" : "bg-slate-50 dark:bg-slate-900/60"}`}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${i % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}>
@@ -146,18 +146,18 @@ export default function IndustriesPage() {
                     {ind.title} Sector
                   </span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-black text-[#0a1628] mb-5">
+                <h2 className="text-3xl sm:text-4xl font-black text-[#0a1628] dark:text-white mb-5">
                   {ind.headline}
                 </h2>
-                <p className="text-slate-600 text-base leading-relaxed mb-6">{ind.desc}</p>
+                <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed mb-6">{ind.desc}</p>
 
                 <div className="mb-6">
-                  <h4 className="text-sm font-bold text-[#0a1628] uppercase tracking-wider mb-3">
+                  <h4 className="text-sm font-bold text-[#0a1628] dark:text-white uppercase tracking-wider mb-3">
                     Recommended Alloys
                   </h4>
                   <div className="space-y-2">
                     {ind.alloys.map((alloy) => (
-                      <div key={alloy} className="flex gap-3 items-center text-sm text-slate-600">
+                      <div key={alloy} className="flex gap-3 items-center text-sm text-slate-600 dark:text-slate-300">
                         <CheckCircle size={16} className="text-[#c8960c] flex-shrink-0" />
                         {alloy}
                       </div>
@@ -174,7 +174,7 @@ export default function IndustriesPage() {
                   </Link>
                   <Link
                     href="/products"
-                    className="inline-flex items-center gap-2 text-[#0a1628] font-semibold text-sm border-b border-[#c8960c] hover:gap-3 transition-all pb-0.5"
+                    className="inline-flex items-center gap-2 text-[#0a1628] dark:text-white font-semibold text-sm border-b border-[#c8960c] hover:gap-3 transition-all pb-0.5"
                   >
                     View Alloys <ArrowRight size={14} />
                   </Link>

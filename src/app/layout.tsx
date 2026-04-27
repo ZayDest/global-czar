@@ -24,7 +24,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col antialiased">
+      <body className="min-h-full flex flex-col bg-white text-slate-950 antialiased transition-colors dark:bg-slate-950 dark:text-slate-100">
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />

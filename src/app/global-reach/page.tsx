@@ -145,7 +145,7 @@ export default function GlobalReachPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl font-black text-white mb-2">Our Global Network</h2>
-            <p className="text-slate-400 text-sm">Supply origins and export destinations</p>
+            <p className="text-slate-400 dark:text-slate-500 text-sm">Supply origins and export destinations</p>
           </div>
           <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
             {/* Simplified network visualization */}
@@ -161,7 +161,7 @@ export default function GlobalReachPage() {
                     <div key={c.country} className="flex items-center gap-2 text-slate-300 text-sm">
                       <span>{c.flag}</span>
                       <span>{c.country}</span>
-                      <span className="text-slate-600 text-xs ml-auto">{c.role}</span>
+                      <span className="text-slate-600 dark:text-slate-300 text-xs ml-auto">{c.role}</span>
                     </div>
                   ))}
                 </div>
@@ -182,7 +182,7 @@ export default function GlobalReachPage() {
                 </div>
                 <div className="mt-4 text-center">
                   <div className="text-white font-bold text-sm">Trading Hubs</div>
-                  <div className="text-slate-400 text-xs">UAE + Singapore</div>
+                  <div className="text-slate-400 dark:text-slate-500 text-xs">UAE + Singapore</div>
                 </div>
               </div>
 
@@ -208,7 +208,7 @@ export default function GlobalReachPage() {
       </section>
 
       {/* Sourcing Countries */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -219,7 +219,7 @@ export default function GlobalReachPage() {
             <h2 className="text-3xl sm:text-4xl font-black text-[#0a1628] mb-4">
               Sourcing Network
             </h2>
-            <p className="text-slate-500 max-w-xl mx-auto">
+            <p className="text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
               Certified mill partnerships across 5 countries ensure supply security and competitive pricing.
             </p>
           </div>
@@ -228,7 +228,7 @@ export default function GlobalReachPage() {
             {sourcingCountries.map((c) => (
               <div
                 key={c.country}
-                className="rounded-2xl border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow card-hover"
+                className="rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden hover:shadow-xl transition-shadow card-hover"
               >
                 <div className={`${c.color} p-6 text-white`}>
                   <div className="flex items-center gap-3">
@@ -239,11 +239,11 @@ export default function GlobalReachPage() {
                     </div>
                   </div>
                 </div>
-                <div className="p-5 bg-white">
-                  <p className="text-slate-500 text-sm leading-relaxed mb-4">{c.desc}</p>
+                <div className="p-5 bg-white dark:bg-slate-950">
+                  <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">{c.desc}</p>
                   <div className="flex flex-wrap gap-2">
                     {c.products.map((p) => (
-                      <span key={p} className="text-xs bg-[#0a1628]/5 text-[#0a1628] font-medium px-2.5 py-1 rounded-full">
+                      <span key={p} className="text-xs bg-[#0a1628]/5 text-[#0a1628] dark:text-white font-medium px-2.5 py-1 rounded-full">
                         {p}
                       </span>
                     ))}
@@ -256,7 +256,7 @@ export default function GlobalReachPage() {
       </section>
 
       {/* Export Markets */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-slate-50 dark:bg-slate-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -271,21 +271,21 @@ export default function GlobalReachPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {exportMarkets.map((m) => (
-              <div key={m.region} className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg transition-shadow">
+              <div key={m.region} className="bg-white dark:bg-slate-950 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 hover:shadow-lg transition-shadow">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <span className="text-4xl">{m.flag}</span>
                     <div>
-                      <div className="font-black text-[#0a1628] text-xl">{m.region}</div>
+                      <div className="font-black text-[#0a1628] dark:text-white text-xl">{m.region}</div>
                     </div>
                   </div>
                   <div className="bg-[#c8960c]/15 text-[#c8960c] font-black text-lg px-4 py-1.5 rounded-full">
                     {m.share}
                   </div>
                 </div>
-                <p className="text-slate-500 text-sm leading-relaxed mb-4">{m.desc}</p>
+                <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">{m.desc}</p>
                 <div>
-                  <div className="text-xs font-bold text-[#0a1628] uppercase tracking-wider mb-2">Key Products</div>
+                  <div className="text-xs font-bold text-[#0a1628] dark:text-white uppercase tracking-wider mb-2">Key Products</div>
                   <div className="flex flex-wrap gap-2">
                     {m.keyAlloys.map((a) => (
                       <span key={a} className="text-xs bg-[#0a1628] text-white px-2.5 py-1 rounded-full">
@@ -336,7 +336,7 @@ export default function GlobalReachPage() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <p className="text-slate-400 text-sm leading-relaxed mb-5">{hub.desc}</p>
+                  <p className="text-slate-400 dark:text-slate-500 text-sm leading-relaxed mb-5">{hub.desc}</p>
                   <div className="space-y-2">
                     {hub.services.map((s) => (
                       <div key={s} className="flex gap-2 items-center text-slate-300 text-sm">

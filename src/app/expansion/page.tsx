@@ -137,10 +137,10 @@ export default function ExpansionPage() {
       </section>
 
       {/* 2030 Vision */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-2xl font-black text-[#0a1628]">GLOBAL CZAR 2030 Targets</h2>
+            <h2 className="text-2xl font-black text-[#0a1628] dark:text-white">GLOBAL CZAR 2030 Targets</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {targets2030.map((t) => (
@@ -154,7 +154,7 @@ export default function ExpansionPage() {
       </section>
 
       {/* Roadmap */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-slate-50 dark:bg-slate-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -165,7 +165,7 @@ export default function ExpansionPage() {
             <h2 className="text-3xl sm:text-4xl font-black text-[#0a1628] mb-4">
               Our Strategic Growth Plan
             </h2>
-            <p className="text-slate-500 max-w-xl mx-auto">
+            <p className="text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
               A phased approach to global expansion, built on strong foundations and sustainable growth.
             </p>
           </div>
@@ -174,7 +174,7 @@ export default function ExpansionPage() {
             {phases.map((phase) => (
               <div
                 key={phase.phase}
-                className="bg-white rounded-2xl border border-slate-100 overflow-hidden hover:shadow-lg transition-shadow"
+                className="bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow"
               >
                 <div className="grid grid-cols-1 md:grid-cols-4">
                   <div className={`${phase.color} p-6 text-white flex flex-col justify-center`}>
@@ -195,10 +195,10 @@ export default function ExpansionPage() {
                     </div>
                   </div>
                   <div className="md:col-span-3 p-6">
-                    <h3 className="font-black text-[#0a1628] text-xl mb-4">{phase.title}</h3>
+                    <h3 className="font-black text-[#0a1628] dark:text-white text-xl mb-4">{phase.title}</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {phase.milestones.map((m) => (
-                        <div key={m} className="flex gap-2 items-start text-sm text-slate-600">
+                        <div key={m} className="flex gap-2 items-start text-sm text-slate-600 dark:text-slate-300">
                           <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 mt-1.5 ${
                             phase.status === "Completed" ? "bg-green-500" :
                             phase.status === "In Progress" ? "bg-[#c8960c]" : "bg-slate-300"
@@ -245,7 +245,7 @@ export default function ExpansionPage() {
                   </div>
                 </div>
                 <h3 className="text-white font-bold text-base mb-2">{item.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-slate-400 dark:text-slate-500 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -253,11 +253,11 @@ export default function ExpansionPage() {
       </section>
 
       {/* Market Focus */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl font-black text-[#0a1628] mb-4">New Market Targets</h2>
-            <p className="text-slate-500 max-w-xl mx-auto">
+            <p className="text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
               Strategic geographic expansion to capture fast-growing manufacturing markets.
             </p>
           </div>
@@ -286,7 +286,7 @@ export default function ExpansionPage() {
                 icon: "🌏",
               },
             ].map((market) => (
-              <div key={market.region} className="rounded-2xl border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow card-hover">
+              <div key={market.region} className="rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden hover:shadow-xl transition-shadow card-hover">
                 <div className="bg-gradient-to-br from-[#0a1628] to-[#1a3a5c] p-6 text-center">
                   <div className="text-5xl mb-3">{market.icon}</div>
                   <div className="text-white font-black text-xl">{market.region}</div>
@@ -294,11 +294,11 @@ export default function ExpansionPage() {
                     Target: {market.eta}
                   </div>
                 </div>
-                <div className="p-5 bg-white">
-                  <p className="text-slate-500 text-sm leading-relaxed mb-4">{market.desc}</p>
+                <div className="p-5 bg-white dark:bg-slate-950">
+                  <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">{market.desc}</p>
                   <div className="flex flex-wrap gap-2">
                     {market.countries.map((c) => (
-                      <span key={c} className="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">
+                      <span key={c} className="text-xs bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 px-2 py-1 rounded">
                         {c}
                       </span>
                     ))}
