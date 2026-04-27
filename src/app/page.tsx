@@ -22,6 +22,9 @@ const stats = [
   { icon: Handshake, value: "100+", label: "Successful Shipments" },
 ];
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const assetPath = (path: string) => `${basePath}${path}`;
+
 const products = [
   {
     name: "ADC12",
@@ -97,7 +100,7 @@ export default function Home() {
       <section className="relative overflow-hidden bg-slate-100 dark:bg-slate-900">
         <div className="absolute inset-y-0 right-0 hidden w-[58%] md:block">
           <Image
-            src="/reference-assets/hero-metal.jpeg"
+            src={assetPath("/reference-assets/hero-metal.jpeg")}
             alt="Stacked aluminium alloy ingots"
             fill
             priority
@@ -175,7 +178,7 @@ export default function Home() {
               <article key={product.name} className="overflow-hidden border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
                 <div className="relative h-24">
                   <Image
-                    src={product.image}
+                    src={assetPath(product.image)}
                     alt={product.name}
                     fill
                     sizes="(min-width: 1024px) 180px, (min-width: 640px) 50vw, 100vw"
@@ -228,7 +231,7 @@ export default function Home() {
             </ul>
             <div className="relative min-h-[155px] overflow-hidden rounded-sm">
               <Image
-                src="/reference-assets/market-ship.jpeg"
+                src={assetPath("/reference-assets/market-ship.jpeg")}
                 alt="Container ship for export markets"
                 fill
                 sizes="(min-width: 1024px) 240px, 100vw"
@@ -253,7 +256,7 @@ export default function Home() {
             </ul>
             <div className="relative min-h-[180px] overflow-hidden rounded-sm">
               <Image
-                src="/reference-assets/services-handshake.jpeg"
+                src={assetPath("/reference-assets/services-handshake.jpeg")}
                 alt="Metals logistics and supply partnership"
                 fill
                 sizes="(min-width: 1024px) 245px, 100vw"
