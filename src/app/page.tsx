@@ -4,11 +4,13 @@ import {
   Award,
   BadgeCheck,
   BriefcaseBusiness,
+  CalendarCheck,
   CheckCircle2,
   ChevronRight,
   FileCheck2,
   Globe2,
   Handshake,
+  Phone,
   PackageCheck,
   ShieldCheck,
   Ship,
@@ -58,6 +60,8 @@ const products = [
   },
 ];
 
+const proofPoints = ["ADC12", "AK5M2", "A356 / LM25", "Non-ferrous metals"];
+
 const regions = [
   ["🇦🇪", "UAE - 75% of Supply"],
   ["🇳🇬", "Nigeria"],
@@ -98,7 +102,7 @@ export default function Home() {
   return (
     <div className="bg-white pt-24 text-slate-900 transition-colors dark:bg-slate-950 dark:text-slate-100">
       <section className="relative overflow-hidden bg-slate-100 dark:bg-slate-900">
-        <div className="absolute inset-y-0 right-0 hidden w-[58%] md:block">
+        <div className="absolute inset-0 md:inset-y-0 md:left-auto md:right-0 md:w-[58%]">
           <Image
             src={assetPath("/reference-assets/hero-metal.jpeg")}
             alt="Stacked aluminium alloy ingots"
@@ -106,31 +110,47 @@ export default function Home() {
             priority
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-100 via-slate-100/75 to-transparent dark:from-slate-900 dark:via-slate-900/80" />
+          <div className="absolute inset-0 bg-slate-100/88 dark:bg-slate-900/86 md:bg-gradient-to-r md:from-slate-100 md:via-slate-100/78 md:to-transparent md:dark:from-slate-900 md:dark:via-slate-900/82" />
         </div>
-        <div className="relative mx-auto grid max-w-7xl items-center px-4 py-7 sm:px-6 md:min-h-[240px] lg:px-8">
-          <div className="max-w-[560px]">
+        <div className="relative mx-auto grid max-w-7xl items-center px-4 py-10 sm:px-6 md:min-h-[350px] lg:px-8">
+          <div className="max-w-[650px]">
             <p className="mb-2 text-sm font-black uppercase tracking-[0.16em] text-[#062b5f] dark:text-sky-300">
-              GLOBAL CZAR
+              GLOBAL CZAR | Aluminium Alloys & Industrial Metals
             </p>
-            <h1 className="text-4xl font-black uppercase leading-[0.95] tracking-tight text-[#09234b] dark:text-white sm:text-5xl">
-              Global Sourcing.
-              <br />
-              Reliable Supply.
+            <h1 className="text-4xl font-black uppercase leading-[0.95] tracking-tight text-[#09234b] dark:text-white sm:text-5xl lg:text-6xl">
+              Reliable metal supply for global buyers.
             </h1>
-            <p className="mt-3 max-w-[560px] text-base font-bold leading-snug text-slate-950 dark:text-slate-100">
-              Your Trusted Indentor & Trading Partner for Aluminium Alloys, Non-Ferrous & Ferrous Metals
+            <p className="mt-4 max-w-[610px] text-lg font-bold leading-snug text-slate-950 dark:text-slate-100">
+              Indenting, sourcing, inspection, and shipment support for aluminium alloys, non-ferrous metals, and ferrous metals.
             </p>
-            <p className="mt-3 max-w-[560px] text-sm leading-relaxed text-slate-800 dark:text-slate-300">
+            <p className="mt-4 max-w-[600px] text-sm leading-relaxed text-slate-800 dark:text-slate-300">
               With 13-14 years of experience, we specialize in ADC12, AK5M2 and a wide range of aluminium
               alloys. Led by Mohammad Rizwan Siddiqui, we source and deliver reliable metal supply for global buyers.
             </p>
-            <Link
-              href="/about"
-              className="mt-5 inline-flex bg-[#062b5f] px-6 py-3 text-xs font-black uppercase text-white transition-colors hover:bg-[#0b3b7d]"
-            >
-              Learn More
-            </Link>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/contact#rfq"
+                className="inline-flex items-center justify-center gap-2 bg-[#062b5f] px-6 py-3 text-xs font-black uppercase text-white transition-colors hover:bg-[#0b3b7d]"
+              >
+                <CalendarCheck size={16} /> Request Quote
+              </Link>
+              <a
+                href="tel:+919997274666"
+                className="inline-flex items-center justify-center gap-2 border border-[#062b5f] bg-white/70 px-6 py-3 text-xs font-black uppercase text-[#062b5f] transition-colors hover:bg-white dark:border-sky-300 dark:bg-slate-950/60 dark:text-sky-200"
+              >
+                <Phone size={16} /> Call +91 99972 74666
+              </a>
+            </div>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {proofPoints.map((point) => (
+                <span
+                  key={point}
+                  className="border border-slate-300 bg-white/60 px-3 py-1 text-[11px] font-bold uppercase text-slate-700 dark:border-slate-700 dark:bg-slate-950/60 dark:text-slate-300"
+                >
+                  {point}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -152,7 +172,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-4 py-6 sm:px-6 lg:grid-cols-[270px_1fr] lg:px-8">
+      <section className="bg-white py-12 transition-colors dark:bg-slate-950">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[310px_1fr] lg:px-8">
         <div>
           <SectionTitle>About Us</SectionTitle>
           <div className="space-y-4 text-sm leading-relaxed text-slate-800 dark:text-slate-300">
@@ -173,31 +194,36 @@ export default function Home() {
 
         <div>
           <SectionTitle>Our Products</SectionTitle>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
             {products.map((product) => (
-              <article key={product.name} className="overflow-hidden border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                <div className="relative h-24">
+              <article
+                key={product.name}
+                className="group overflow-hidden border border-slate-200 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900"
+              >
+                <div className="relative h-36">
                   <Image
                     src={assetPath(product.image)}
                     alt={product.name}
                     fill
-                    sizes="(min-width: 1024px) 180px, (min-width: 640px) 50vw, 100vw"
+                    sizes="(min-width: 1280px) 310px, (min-width: 640px) 50vw, 100vw"
                     loading="eager"
-                    className="object-cover"
+                    className="object-cover transition duration-300 group-hover:scale-105"
                   />
                 </div>
-                <div className="p-3">
+                <div className="p-4">
                   <p className="text-[11px] font-bold uppercase text-slate-500 dark:text-slate-400">{product.kicker}</p>
-                  <h3 className="mt-1 text-sm font-black uppercase text-[#09234b] dark:text-white">{product.name}</h3>
-                  <p className="mt-2 text-[12px] leading-snug text-slate-700 dark:text-slate-300">{product.desc}</p>
+                  <h3 className="mt-1 text-base font-black uppercase text-[#09234b] dark:text-white">{product.name}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-700 dark:text-slate-300">{product.desc}</p>
                 </div>
               </article>
             ))}
           </div>
         </div>
+        </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-4 pb-6 sm:px-6 lg:grid-cols-[270px_1fr_1.6fr] lg:px-8">
+      <section className="border-y border-slate-200 bg-slate-50 py-12 transition-colors dark:border-slate-800 dark:bg-slate-900/55">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[280px_1fr_1.35fr] lg:px-8">
         <div>
           <SectionTitle>Sourcing Regions</SectionTitle>
           <div className="space-y-1">
@@ -265,9 +291,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-4 pb-4 sm:px-6 lg:grid-cols-[1fr_355px] lg:px-8">
+      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1fr_390px] lg:px-8">
         <div>
           <SectionTitle>Why Choose Us?</SectionTitle>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
@@ -309,7 +336,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#062b5f] px-4 py-5 text-center text-white">
+      <section className="bg-[#062b5f] px-4 py-8 text-center text-white">
         <h2 className="text-2xl font-black uppercase tracking-wide">Let&apos;s Build Your Next Success Together</h2>
         <p className="mx-auto mt-2 max-w-4xl text-sm text-white/85">
           Whether you need ADC12, AK5M2, other aluminium alloys, or a wide range of metals - we are here to source,
@@ -317,9 +344,9 @@ export default function Home() {
         </p>
         <Link
           href="/contact#rfq"
-          className="mt-4 inline-flex bg-white px-6 py-3 text-xs font-black uppercase text-[#062b5f] transition-colors hover:bg-slate-100"
+          className="mt-5 inline-flex bg-white px-6 py-3 text-xs font-black uppercase text-[#062b5f] transition-colors hover:bg-slate-100"
         >
-          Contact Us Today
+          Request Quote Today
         </Link>
       </section>
     </div>

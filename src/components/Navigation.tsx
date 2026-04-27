@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ChevronDown, Mail, MapPin, Menu, Phone, X } from "lucide-react";
+import { ChevronDown, MapPin, Menu, Phone, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
+  { label: "About", href: "/about" },
   { label: "Products", href: "/products", hasMenu: true },
-  { label: "Sourcing Regions", href: "/global-reach" },
+  { label: "Sourcing", href: "/global-reach" },
   { label: "Markets", href: "/industries" },
   { label: "Services", href: "/products#services" },
   { label: "News", href: "/blog" },
@@ -25,9 +25,6 @@ export default function Navigation() {
         <div className="mx-auto flex h-8 max-w-7xl items-center justify-between px-4 text-[11px] sm:px-6 lg:px-8">
           <p className="hidden sm:block">GLOBAL CZAR - Connecting Global Suppliers to Global Industries</p>
           <div className="ml-auto flex items-center gap-4">
-            <span className="hidden items-center gap-1.5 md:flex">
-              <Mail size={13} /> Mohammad Rizwan Siddiqui
-            </span>
             <a className="flex items-center gap-1.5" href="tel:+919997274666">
               <Phone size={13} /> +91 99972 74666
             </a>
@@ -40,7 +37,7 @@ export default function Navigation() {
 
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
-          <Link href="/" className="flex min-w-0 items-center gap-3">
+          <Link href="/" className="flex min-w-[210px] items-center gap-3 lg:min-w-[245px]">
             <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-[#062b5f] text-[#062b5f] dark:border-white dark:text-white">
               <span className="text-lg font-black">G</span>
             </div>
@@ -48,8 +45,8 @@ export default function Navigation() {
               <span className="block truncate text-base font-black uppercase leading-none text-[#09234b] dark:text-white">
                 GLOBAL CZAR
               </span>
-              <span className="mt-1 block truncate text-[10px] font-bold uppercase leading-none tracking-[0.14em] text-[#38516f] dark:text-slate-400">
-                Mohammad Rizwan Siddiqui
+              <span className="mt-1 block truncate text-[10px] font-bold uppercase leading-none tracking-[0.08em] text-[#38516f] dark:text-slate-400">
+                Owner: Mohammad Rizwan Siddiqui
               </span>
             </div>
           </Link>
@@ -59,7 +56,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="inline-flex items-center gap-1 px-3 py-2 text-[12px] font-black uppercase text-slate-950 transition-colors hover:text-[#062b5f] dark:text-slate-100 dark:hover:text-sky-300"
+                className="inline-flex items-center gap-1 whitespace-nowrap px-2.5 py-2 text-[12px] font-black uppercase text-slate-950 transition-colors hover:text-[#062b5f] dark:text-slate-100 dark:hover:text-sky-300"
               >
                 {link.label}
                 {link.hasMenu ? <ChevronDown size={13} strokeWidth={3} /> : null}
@@ -73,7 +70,7 @@ export default function Navigation() {
               href="/contact#rfq"
               className="shrink-0 bg-[#062b5f] px-6 py-3 text-[12px] font-black uppercase text-white transition-colors hover:bg-[#0b3b7d]"
             >
-              Get a Quote
+              Get Quote
             </Link>
           </div>
 
@@ -107,7 +104,7 @@ export default function Navigation() {
               className="mt-2 block bg-[#062b5f] px-5 py-3 text-center text-sm font-black uppercase text-white"
               onClick={() => setIsOpen(false)}
             >
-              Get a Quote
+              Get Quote
             </Link>
           </div>
         ) : null}
