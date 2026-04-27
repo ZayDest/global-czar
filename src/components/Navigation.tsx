@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { ChevronDown, MapPin, Menu, Phone, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import GlobalCzarLogo from "./GlobalCzarLogo";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -38,17 +39,10 @@ export default function Navigation() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
           <Link href="/" className="flex min-w-[210px] items-center gap-3 lg:min-w-[245px]">
-            <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-[#062b5f] text-[#062b5f] dark:border-white dark:text-white">
-              <span className="text-lg font-black">G</span>
-            </div>
-            <div className="min-w-0">
-              <span className="block truncate text-base font-black uppercase leading-none text-[#09234b] dark:text-white">
-                GLOBAL CZAR
-              </span>
-              <span className="mt-1 block truncate text-[10px] font-bold uppercase leading-none tracking-[0.08em] text-[#38516f] dark:text-slate-400">
-                Owner: Mohammad Rizwan Siddiqui
-              </span>
-            </div>
+            <GlobalCzarLogo
+              markClassName="text-[#062b5f] dark:text-white"
+              textClassName="text-[#09234b] dark:text-white"
+            />
           </Link>
 
           <div className="hidden items-center gap-1 xl:flex">

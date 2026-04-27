@@ -1,0 +1,12 @@
+<svg width="320" height="96" viewBox="0 0 320 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GLOBAL CZAR logo">
+  <g fill="#062B5F">
+    <circle cx="48" cy="48" r="43" opacity="0.08"/>
+    <circle cx="48" cy="48" r="40" fill="none" stroke="#062B5F" stroke-width="4"/>
+    <path d="M26 52h32c6.6 0 12-5.4 12-12S64.6 28 58 28H42.7" fill="none" stroke="#062B5F" stroke-width="7" stroke-linecap="round"/>
+    <path d="M70 44H38c-6.6 0-12 5.4-12 12s5.4 12 12 12h15.3" fill="none" stroke="#062B5F" stroke-width="7" stroke-linecap="round"/>
+    <path d="M38 38h20L48 59h19" fill="none" stroke="#062B5F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="72" cy="27" r="5"/>
+  </g>
+  <text x="108" y="44" fill="#09234B" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="900" letter-spacing=".8">GLOBAL CZAR</text>
+  <text x="110" y="64" fill="#38516F" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="800" letter-spacing="1.8">METALS SOURCING &amp; TRADING</text>
+</svg>

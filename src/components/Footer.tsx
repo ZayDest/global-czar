@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone, Send, Share2 } from "lucide-react";
+import GlobalCzarLogo from "./GlobalCzarLogo";
 
 const quickLinks = [
   ["Home", "/"],
@@ -18,15 +19,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-7 sm:px-6 md:grid-cols-[1.2fr_1.5fr_1.3fr_0.7fr] lg:px-8">
         <div>
           <Link href="/" className="flex items-center gap-3">
-            <div className="grid h-10 w-10 place-items-center rounded-full border-2 border-white">
-              <span className="text-lg font-black">G</span>
-            </div>
-            <div>
-              <span className="block text-base font-black uppercase leading-none">GLOBAL CZAR</span>
-              <span className="mt-1 block text-[10px] font-bold uppercase tracking-[0.14em] text-white/70">
-                Mohammad Rizwan Siddiqui
-              </span>
-            </div>
+            <GlobalCzarLogo markClassName="text-white" textClassName="text-white" />
           </Link>
           <p className="mt-5 text-sm font-semibold text-white/85">Global Sourcing. Reliable Supply.</p>
         </div>
