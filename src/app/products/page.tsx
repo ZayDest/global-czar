@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle, Download, Shield, Truck, FileCheck, Compass, BarChart3 } from "lucide-react";
+import { ArrowRight, CheckCircle, Shield, Truck, FileCheck, Compass, BarChart3 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Products & Services | GLOBAL CZAR",
   description:
-    "Premium aluminum alloys: ADC12, AK5M2, AC4B, AC2B, LM25, LM27, A356. Industrial metals: Lead, Zinc, Ferroalloys. Full-service trading and logistics.",
+    "Premium aluminum alloys: ADC12, AK5M2, AC4B, AC2B, LM25, LM27, A356. Industrial metals: lead ingots, zinc ingots, and ferroalloys. Full-service trading and logistics.",
 };
 
 const alloys = [
@@ -135,14 +135,14 @@ const otherMetals = [
     specs: ["1050, 1060, 1070 purity grades", "6061, 6063 extrusion billets", "99.7% purity ingots", "Custom sizes available"],
   },
   {
-    id: "leadzinc",
+    id: "lead-ingots",
     name: "Lead Ingots",
     desc: "High-purity lead ingots (99.97%+) for battery manufacturing, radiation shielding, and industrial applications.",
     icon: "⚫",
     specs: ["Purity: 99.97% – 99.99%", "Standard pig: 25–50 kg", "LME-grade quality", "REACH compliant"],
   },
   {
-    id: "zinc",
+    id: "zinc-ingots",
     name: "Zinc Ingots",
     desc: "SHG (Special High Grade) zinc for galvanizing, die casting, and chemical applications.",
     icon: "🔲",
@@ -206,7 +206,7 @@ export default function ProductsPage() {
             Premium Metals Portfolio
           </h1>
           <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-            Aluminum alloys, industrial metals, and full-service trading solutions
+            Aluminum alloys, lead ingots, zinc ingots, industrial metals, and full-service trading solutions
             — sourced from certified mills, delivered globally.
           </p>
         </div>
@@ -313,7 +313,7 @@ export default function ProductsPage() {
               <div className="w-8 h-1 bg-[#c8960c] rounded" />
             </div>
             <h2 className="text-3xl font-black text-[#0a1628] mb-4">
-              Billets, Ingots & Industrial Metals
+              Billets, Lead Ingots, Zinc Ingots & Industrial Metals
             </h2>
           </div>
 

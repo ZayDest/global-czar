@@ -47,10 +47,22 @@ const products = [
     desc: "A356, 6061, 6063, 7075, LM24, and custom grades as per customer requirements.",
   },
   {
-    name: "Non-Ferrous Metals",
-    kicker: "Copper, Zinc, Lead",
+    name: "Lead Ingots",
+    kicker: "Pb 99.97%+",
     image: "/reference-assets/product-copper.jpeg",
-    desc: "Copper, zinc, lead, nickel, tin, and their alloys for global industrial buyers.",
+    desc: "High-purity lead ingots for battery manufacturing, radiation shielding, roofing, and industrial applications.",
+  },
+  {
+    name: "Zinc Ingots",
+    kicker: "SHG 99.995%",
+    image: "/reference-assets/product-copper.jpeg",
+    desc: "Special High Grade zinc ingots for galvanizing, die casting, brass production, and chemical applications.",
+  },
+  {
+    name: "Non-Ferrous Metals",
+    kicker: "Copper, Nickel, Tin",
+    image: "/reference-assets/product-copper.jpeg",
+    desc: "Copper, nickel, tin, and other non-ferrous metals and alloys for global industrial buyers.",
   },
   {
     name: "Ferrous Metals",
@@ -60,7 +72,7 @@ const products = [
   },
 ];
 
-const proofPoints = ["ADC12", "AK5M2", "A356 / LM25", "Non-ferrous metals"];
+const proofPoints = ["ADC12", "AK5M2", "Lead Ingots", "Zinc Ingots", "A356 / LM25", "Non-ferrous metals"];
 
 const regions = [
   ["🇦🇪", "UAE - 75% of Supply"],
@@ -115,16 +127,16 @@ export default function Home() {
         <div className="relative mx-auto grid max-w-7xl items-center px-4 py-10 sm:px-6 md:min-h-[350px] lg:px-8">
           <div className="max-w-[650px]">
             <p className="mb-2 text-sm font-black uppercase tracking-[0.16em] text-[#062b5f] dark:text-sky-300">
-              GLOBAL CZAR | Aluminium Alloys & Industrial Metals
+              GLOBAL CZAR | Aluminium Alloys, Lead Ingots & Zinc Ingots
             </p>
             <h1 className="text-4xl font-black uppercase leading-[0.95] tracking-tight text-[#09234b] dark:text-white sm:text-5xl lg:text-6xl">
               Reliable metal supply for global buyers.
             </h1>
             <p className="mt-4 max-w-[610px] text-lg font-bold leading-snug text-slate-950 dark:text-slate-100">
-              Indenting, sourcing, inspection, and shipment support for aluminium alloys, non-ferrous metals, and ferrous metals.
+              Indenting, sourcing, inspection, and shipment support for aluminium alloys, lead ingots, zinc ingots, non-ferrous metals, and ferrous metals.
             </p>
             <p className="mt-4 max-w-[600px] text-sm leading-relaxed text-slate-800 dark:text-slate-300">
-              With 13-14 years of experience, we specialize in ADC12, AK5M2 and a wide range of aluminium
+              With 13-14 years of experience, we specialize in ADC12, AK5M2, lead ingots, zinc ingots, and a wide range of aluminium
               alloys. Led by Mohammad Rizwan Siddiqui, we source and deliver reliable metal supply for global buyers.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -339,7 +351,7 @@ export default function Home() {
       <section className="bg-[#062b5f] px-4 py-8 text-center text-white">
         <h2 className="text-2xl font-black uppercase tracking-wide">Let&apos;s Build Your Next Success Together</h2>
         <p className="mx-auto mt-2 max-w-4xl text-sm text-white/85">
-          Whether you need ADC12, AK5M2, other aluminium alloys, or a wide range of metals - we are here to source,
+          Whether you need ADC12, AK5M2, lead ingots, zinc ingots, other aluminium alloys, or a wide range of metals - we are here to source,
           supply, and deliver with excellence.
         </p>
         <Link
