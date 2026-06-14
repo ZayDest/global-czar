@@ -23,12 +23,6 @@ const alloys = [
       "Consumer electronics",
       "Power tool housings",
     ],
-    properties: [
-      { prop: "Tensile Strength", val: "≥ 230 MPa" },
-      { prop: "Yield Strength", val: "≥ 180 MPa" },
-      { prop: "Hardness", val: "≥ 85 HB" },
-      { prop: "Density", val: "2.74 g/cm³" },
-    ],
     color: "from-[#0a1628] to-[#1a3a5c]",
     popular: true,
   },
@@ -45,12 +39,6 @@ const alloys = [
       "Automotive structural parts",
       "Industrial machinery",
       "Aerospace components",
-    ],
-    properties: [
-      { prop: "Tensile Strength", val: "≥ 200 MPa" },
-      { prop: "Elongation", val: "≥ 2%" },
-      { prop: "Hardness", val: "70–90 HB" },
-      { prop: "Melting Point", val: "575–635°C" },
     ],
     color: "from-[#112240] to-[#1e4a78]",
     popular: false,
@@ -69,12 +57,6 @@ const alloys = [
       "Bicycle frames",
       "Medical equipment",
     ],
-    properties: [
-      { prop: "Tensile Strength", val: "≥ 280 MPa (T6)" },
-      { prop: "Yield Strength", val: "≥ 210 MPa (T6)" },
-      { prop: "Elongation", val: "≥ 8% (T6)" },
-      { prop: "Hardness", val: "≥ 75 HB" },
-    ],
     color: "from-[#1a3a5c] to-[#2a5a8c]",
     popular: true,
   },
@@ -92,12 +74,6 @@ const alloys = [
       "High-pressure castings",
       "Precision die castings",
     ],
-    properties: [
-      { prop: "Tensile Strength", val: "≥ 215 MPa" },
-      { prop: "Elongation", val: "≥ 1%" },
-      { prop: "Hardness", val: "≥ 80 HB" },
-      { prop: "Porosity", val: "Low (die-cast grade)" },
-    ],
     color: "from-[#0f2a4a] to-[#1a4a70]",
     popular: false,
   },
@@ -114,12 +90,6 @@ const alloys = [
       "Electrical components",
       "Automotive accessories",
       "Decorative components",
-    ],
-    properties: [
-      { prop: "Tensile Strength", val: "≥ 190 MPa" },
-      { prop: "Elongation", val: "≥ 3%" },
-      { prop: "Hardness", val: "65–80 HB" },
-      { prop: "Machinability", val: "Excellent" },
     ],
     color: "from-[#162035] to-[#243d5c]",
     popular: false,
@@ -256,8 +226,8 @@ export default function ProductsPage() {
 
                   {/* Content */}
                   <div className="lg:col-span-4 p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                      <div className="md:col-span-2">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_180px] gap-6">
+                      <div>
                         <h3 className="font-black text-[#0a1628] dark:text-white text-xl mb-2">{alloy.fullName}</h3>
                         <p className="text-slate-500 dark:text-slate-400 text-xs mb-2 font-mono bg-slate-50 dark:bg-slate-900/60 inline-block px-2 py-1 rounded">
                           {alloy.composition}
@@ -275,21 +245,10 @@ export default function ProductsPage() {
                         </div>
                       </div>
 
-                      <div>
-                        <div className="text-xs font-bold text-[#0a1628] dark:text-white uppercase tracking-wider mb-3">
-                          Typical Properties
-                        </div>
-                        <div className="space-y-2">
-                          {alloy.properties.map((p) => (
-                            <div key={p.prop} className="flex justify-between text-sm border-b border-slate-100 dark:border-slate-800 pb-2">
-                              <span className="text-slate-500 dark:text-slate-400">{p.prop}</span>
-                              <span className="font-semibold text-[#0a1628] dark:text-white">{p.val}</span>
-                            </div>
-                          ))}
-                        </div>
+                      <div className="flex items-start md:justify-end">
                         <Link
                           href="/contact#rfq"
-                          className="mt-5 flex items-center justify-center gap-2 bg-[#c8960c] hover:bg-[#f0b429] text-[#0a1628] font-bold text-sm px-4 py-2.5 rounded transition-all w-full"
+                          className="flex w-full items-center justify-center gap-2 rounded bg-[#c8960c] px-4 py-2.5 text-sm font-bold text-[#0a1628] transition-all hover:bg-[#f0b429] md:w-auto"
                         >
                           Request Quote <ArrowRight size={14} />
                         </Link>

@@ -38,6 +38,8 @@ jobs:
         run: npm ci
 
       - name: Build static site
+        env:
+          GITHUB_PAGES_CUSTOM_DOMAIN: "true"
         run: npm run build
 
       - name: Upload artifact
